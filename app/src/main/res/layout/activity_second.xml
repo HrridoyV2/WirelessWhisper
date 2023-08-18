@@ -2,54 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/b"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
     tools:context=".SecondActivity">
+
     <TextView
         android:id="@+id/textid1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
         android:text="Wireless Whispering"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:layout_marginTop="28dp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/logoid"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/textid1"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_below="@id/logoid"
-       android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
-        app:cardCornerRadius="15dp"
-        android:id="@+id/cardid"
-       >
+        android:background="@color/white"
+        app:cardCornerRadius="15dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="@drawable/colouredcard"
+            android:orientation="vertical"
             android:padding="15dp">
 
             <LinearLayout
+                android:id="@+id/logintocontinue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:id="@+id/logintocontinue"
                 android:orientation="horizontal">
 
                 <TextView
@@ -75,9 +78,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:padding="10dp"
                 android:background="@drawable/colourededittext"
                 android:hint="Enter Your Full Name"
+                android:padding="10dp"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <EditText
@@ -85,9 +89,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:padding="10dp"
                 android:background="@drawable/colourededittext"
                 android:hint="Enter Your Display Name"
+                android:padding="10dp"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <TextView
@@ -98,46 +103,48 @@
                 android:text="Add Display Photo"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                    <ImageView
-                        android:id="@+id/profileid"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/image1" />
 
-                    <Button
-                        android:id="@+id/browseid"
-                        android:layout_width="90dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_toEndOf="@id/profileid"
-                        android:background="#52056E"
-                        android:onClick="onClick"
-                        android:text="Browse"
-                        android:layout_alignBottom="@+id/profileid"
-                        android:layout_marginBottom="10dp"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/profileid"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/image1" />
+
+                <Button
+                    android:id="@+id/browseid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/profileid"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileid"
+                    android:background="#52056E"
+                    android:onClick="onClick"
+                    android:text="Browse"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/loginid"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Log in"
-        android:textSize="15sp"
-        android:onClick="onClick"
-        android:textColor="@color/white"
-        android:background="@drawable/button_round"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/cardid"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_round"
+        android:onClick="onClick"
+        android:text="Log in"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 </RelativeLayout>

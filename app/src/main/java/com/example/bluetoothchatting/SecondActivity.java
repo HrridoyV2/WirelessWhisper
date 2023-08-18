@@ -3,6 +3,9 @@ package com.example.bluetoothchatting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -13,7 +16,8 @@ import android.widget.ImageView;
 public class SecondActivity extends AppCompatActivity {
 private EditText full1,display1;
 private Button browse,login;
-ImageView profile;
+    Uri uri;
+    ImageView profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +43,19 @@ ImageView profile;
            i.putExtras(bundle1);
             Bundle bundle2=new Bundle();
             bundle2.putString("dispnme",display1.getText().toString());
-
            i.putExtras(bundle2);
+           i.putExtra("img",uri);
             startActivity(i);
         }
     }
-    protected void onActivityResult(int requestCode,int resultCode,Intent data)
-    {
-        if(requestCode==1)
+    protected void onActivityResult(int requestCode,int resultCode,Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode==RESULT_OK && null!=data) {
+           uri = data.getData();
+           profile.setImageURI(uri);
+
+
+
+        }
     }
 }
