@@ -16,6 +16,7 @@ Intent intent;
         setContentView(R.layout.activity_main);
         button=(Button) findViewById(R.id.buttonid);
     }
+
     public void onClick(View v)
     {
         intent=new Intent(MainActivity.this, SecondActivity.class);
