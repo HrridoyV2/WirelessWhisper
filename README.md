@@ -7,10 +7,12 @@ git clone https://github.com/HrridoyV2/WirelessWhispering.git
 ```
 git pull origin master
 ```
-
-## To Update the Remote from Local
+## To Save the file in git
 ```
 git add .
 git commit -m"message"
+```
+## To Update the Remote from Local
+```
 git push
 ```
