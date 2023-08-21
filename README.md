@@ -1,5 +1,5 @@
 # WirelessWhispering
-## To clone the Repo To Locally
+## To clone the Repo To Local
 ```
 git clone https://github.com/HrridoyV2/WirelessWhispering.git
 ```
